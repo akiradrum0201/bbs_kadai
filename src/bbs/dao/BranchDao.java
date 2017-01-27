@@ -18,7 +18,7 @@ public class BranchDao {
 
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append("SELECT * FROM bbs.branches " );
+			sql.append("SELECT * FROM branches " );
 			ps = connection.prepareStatement(sql.toString());
 			ResultSet rs = ps.executeQuery();
 			List<Branch> ret = toBranches(rs);

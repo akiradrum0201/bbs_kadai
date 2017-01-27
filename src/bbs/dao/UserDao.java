@@ -20,7 +20,7 @@ public class UserDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append( "UPDATE  bbs.users SET is_stopped = 1 WHERE id = ?");
+			sql.append( "UPDATE  users SET is_stopped = 1 WHERE id = ?");
 			ps = connection.prepareStatement(sql.toString());
 			ps.setInt(1, stopped);
 			ps.executeUpdate();
@@ -37,7 +37,7 @@ public class UserDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append( "UPDATE  bbs.users SET is_stopped = 0 WHERE id = ?");
+			sql.append( "UPDATE  users SET is_stopped = 0 WHERE id = ?");
 			ps = connection.prepareStatement(sql.toString());
 			ps.setInt(1, resurrection);
 			ps.executeUpdate();
@@ -53,7 +53,7 @@ public class UserDao {
 	public User getSettingUser(Connection connection, int id) {
 		PreparedStatement ps = null;
 		try {
-			String sql = "SELECT * FROM bbs.users WHERE id = ? ";
+			String sql = "SELECT * FROM users WHERE id = ? ";
 			ps = connection.prepareStatement(sql);
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
@@ -79,7 +79,7 @@ public class UserDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append("SELECT * FROM bbs.users ");
+			sql.append("SELECT * FROM users ");
 			ps = connection.prepareStatement(sql.toString());
 			ResultSet rs = ps.executeQuery();
 			List<User> ret = toUserList(rs);
@@ -95,7 +95,7 @@ public class UserDao {
 	public User getUser(Connection connection, String login_id) {
 		PreparedStatement ps = null;
 		try {
-			String sql = "SELECT * FROM bbs.users WHERE login_id = ?";
+			String sql = "SELECT * FROM users WHERE login_id = ?";
 			ps = connection.prepareStatement(sql);
 			ps.setString(1, login_id);
 			ResultSet rs = ps.executeQuery();
@@ -122,7 +122,7 @@ public class UserDao {
 	public User getUser(Connection connection, int id) {
 		PreparedStatement ps = null;
 		try {
-			String sql = "SELECT * FROM bbs.users WHERE id = ?";
+			String sql = "SELECT * FROM users WHERE id = ?";
 			ps = connection.prepareStatement(sql);
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
@@ -148,7 +148,7 @@ public class UserDao {
 	public User getUser(Connection connection, String login_id, String password) {
 		PreparedStatement ps = null;
 		try {
-			String sql = "SELECT * FROM bbs.users WHERE(login_id = ? AND password = ?)";
+			String sql = "SELECT * FROM users WHERE(login_id = ? AND password = ?)";
 			ps = connection.prepareStatement(sql);
 			ps.setString(1, login_id);
 			ps.setString(2, password);
@@ -201,7 +201,7 @@ public class UserDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append("INSERT INTO bbs.users (");
+			sql.append("INSERT INTO users (");
 			sql.append("login_id");
 			sql.append(", password");
 			sql.append(", name");
@@ -238,7 +238,7 @@ public class UserDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append( "UPDATE  bbs.users SET");
+			sql.append( "UPDATE  users SET");
 			sql.append(" login_id=?");
 			sql.append(", name =?");
 			sql.append(", branch_id =?");

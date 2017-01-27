@@ -19,7 +19,7 @@ public class UserCommentDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append("SELECT * FROM bbs.users_comments ");
+			sql.append("SELECT * FROM users_comments ");
 			sql.append("ORDER BY insert_date DESC limit " + num);
 
 			ps = connection.prepareStatement(sql.toString());
@@ -70,7 +70,7 @@ public class UserCommentDao {
 		PreparedStatement ps = null;
 			try {
 				StringBuilder sql = new StringBuilder();
-				sql.append( "DELETE  FROM bbs.comments WHERE id = ?");
+				sql.append( "DELETE  FROM comments WHERE id = ?");
 				ps = connection.prepareStatement(sql.toString());
 				ps.setInt(1, stopped);
 				ps.executeUpdate();

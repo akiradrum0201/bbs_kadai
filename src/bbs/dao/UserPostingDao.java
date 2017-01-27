@@ -19,7 +19,7 @@ public class UserPostingDao {
 	public Timestamp  getDate(Connection connection, Timestamp date){
 		PreparedStatement ps = null;
 		try {
-			String sql = "SELECT min(insert_date) AS insert_date from bbs.users_postings";
+			String sql = "SELECT min(insert_date) AS insert_date from users_postings";
 			ps = connection.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			rs.next();
@@ -37,7 +37,7 @@ public class UserPostingDao {
 		try {
 			StringBuilder sql = new StringBuilder();
 			if(StringUtils.isEmpty(findCategory)==false) {
-				sql.append("SELECT * FROM bbs.users_postings WHERE insert_date >= ? AND insert_date <= ? and category= ? ");
+				sql.append("SELECT * FROM users_postings WHERE insert_date >= ? AND insert_date <= ? and category= ? ");
 				sql.append("ORDER BY insert_date DESC limit " + num);
 				ps = connection.prepareStatement(sql.toString());
 				ps.setString(1, start_date);
@@ -46,7 +46,7 @@ public class UserPostingDao {
 
 
 			} else {
-				sql.append("SELECT * FROM bbs.users_postings WHERE insert_date >=? AND insert_date <=? ");
+				sql.append("SELECT * FROM users_postings WHERE insert_date >=? AND insert_date <=? ");
 				sql.append("ORDER BY insert_date DESC limit " + num);
 				ps = connection.prepareStatement(sql.toString());
 				ps.setString(1, start_date);

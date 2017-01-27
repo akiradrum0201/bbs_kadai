@@ -16,7 +16,7 @@ public class DepartmentDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append("SELECT * FROM bbs.departments " );
+			sql.append("SELECT * FROM departments " );
 			ps = connection.prepareStatement(sql.toString());
 			ResultSet rs = ps.executeQuery();
 			List<Department> ret = toDepartments(rs);

@@ -13,7 +13,7 @@ public class PostingDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append("INSERT INTO bbs.postings (");
+			sql.append("INSERT INTO postings (");
 			sql.append("user_id");
 			sql.append(", subject");
 			sql.append(", text");
@@ -49,7 +49,7 @@ public class PostingDao {
 		PreparedStatement ps = null;
 			try {
 				StringBuilder sql = new StringBuilder();
-				sql.append( "DELETE  FROM bbs.postings WHERE id = ?");
+				sql.append( "DELETE  FROM postings WHERE id = ?");
 				ps = connection.prepareStatement(sql.toString());
 				ps.setInt(1, deletePosting);
 				ps.executeUpdate();

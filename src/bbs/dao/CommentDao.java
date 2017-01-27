@@ -17,7 +17,7 @@ public class CommentDao {
 		PreparedStatement ps = null;
 			try {
 				StringBuilder sql = new StringBuilder();
-				sql.append("INSERT INTO bbs.comments ( ");
+				sql.append("INSERT INTO comments ( ");
 				sql.append("posting_id");
 				sql.append(", text");
 				sql.append(", update_date");
@@ -52,7 +52,7 @@ public class CommentDao {
 			try {
 				StringBuilder sql = new StringBuilder();
 
-				sql.append( "DELETE  FROM bbs.comments WHERE id = ?");
+				sql.append( "DELETE  FROM comments WHERE id = ?");
 				ps = connection.prepareStatement(sql.toString());
 				ps.setInt(1, deleteComment);
 				ps.executeUpdate();
