@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+body {
+background-color:#fbfaf5;
+}
+
+.main-contents{
+
+	width: 700px;
+	height: 5
+    margin: 10px auto;
+    padding: 30px;
+    border: 2px solid #555;
+	}
+form p{
+    font-size: 17px;
+    }
+#title {
+    padding:10px 100px 10px 230px
+	}
+.loginId,.password,password_confirmation,name{
+    margin-bottom: 5px;
+    }
+input[type="loginId"],
+input[type="password"],
+input[type="name"] {
+    width: 300px;
+    padding: 2px;
+    font-size: 14px;
+    }
+.submit{
+    text-align: center;
+    }
+
+input[type="submit"] {
+	margin-left: auto;
+    margin-right: auto;
+	width: 100px;
+	}
+.select {
+	width: 1000px
+	height:20px
+	}
+.button {
+   text-align:center;
+}

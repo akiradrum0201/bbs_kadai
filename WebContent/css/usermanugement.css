@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+form p{
+    font-size: 17px;
+    }
+body {
+	background-color:#fbfaf5;
+	}
+
+#title {
+    padding:10px 100px 10px 400px;
+	}
+
+.users {
+	width: 1100px;
+	height: 5;
+    margin: 10px auto;
+    padding: 10px;
+	}
+th {
+	background-color:#b0c4de;
+	font-size: 20px;
+	width: 100px;
+	height: 50px;
+}
+
+td {
+	text-align:center;
+	font-size: 18px;
+	width: 60px;
+	height: 40px;
+}

@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+body {
+background-color:#fbfaf5;
+}
+
+#title {
+	text-align: center;
+}
+
+.main-contents{
+	width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #555;
+	}
+form p{
+    font-size: 14px;
+
+    }
+
+.loginId,.password{
+    margin-bottom: 20px;
+    }
+input[type="loginId"],
+input[type="password"] {
+    width: 300px;
+    padding: 4px;
+    font-size: 14px;
+    }
+.submit{
+    text-align: center;
+    }

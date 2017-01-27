@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+body {
+background-color:#fbfaf5;
+}
+
+#title {
+	padding:10px 100px 10px 350px;
+	}
+
+th {
+	font-size: 20px;
+	width: 90px;
+	height: 30px;
+}
+th.text {
+	font-size: 20px;
+	width: 200px;
+	height: 200px;
+}
